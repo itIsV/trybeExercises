@@ -1,0 +1,27 @@
+<style>
+           h1{  font-family: sans-serif; 
+                color:orange; 
+                font-size: 65px;
+           }
+           body{background-color: rgb(240,255,255);
+                font-size: 16px;
+           }
+           ul{
+              background-color: rgb(214, 235, 235); 
+           }
+           .fundoPUl{background-color: rgb(214, 240, 196);}
+        p{font-weight: 600;
+          font-size: 3em;
+        }
+        #amarelo{text-align: center;
+            background-color:rgb(253, 253, 130);
+        }
+        #vermelho{
+            font-style:oblique;
+            background-color: rgb(245, 118, 118);
+        }
+        #marron{text-decoration:line-through;
+            text-align: end;
+            background-color: rgb(138, 50, 50);
+        }
+        </style>
