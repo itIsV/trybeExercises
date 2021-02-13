@@ -1,0 +1,23 @@
+.mario{
+    width: 250px;
+    margin: 100px;
+}
+.goomba{
+    width: 350px;
+    margin: 100px;
+}
+.bowser{
+    width: 500px;
+    float: right;
+}
+.baloon{position: absolute;
+    margin: 50px;
+    top:700px;
+    z-index: 1;
+    right: 470px;
+}
+.word{
+    position: absolute;
+    z-index: 2;
+    left: 600px;
+}
