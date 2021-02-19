@@ -40,3 +40,27 @@ li em{
 .java{
     background-color:#FF1493;
 }
+
+a:hover{
+font-weight: bold;
+}
+
+.stack:hover{
+    color: orange;
+}
+
+.w3:hover{
+    color: green;
+}
+
+.mdn:hover{
+    color: black;
+}
+
+.devDocs:hover{
+    color: yellow;
+}
+
+.tribo:hover{
+    color: #2fc18c;
+}
