@@ -1,0 +1,7 @@
+div:hover{
+    border-style:outset;
+    border-color: midnightblue;
+}
+div{
+    line-height: 40px;
+}
