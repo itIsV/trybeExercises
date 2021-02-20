@@ -1,0 +1,11 @@
+div:hover{
+    text-align: center;
+    border-style:outset;
+    border-color: midnightblue;
+}
+div{
+    line-height: 40px;
+}
+h3{
+    color: snow;
+}
