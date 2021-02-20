@@ -1,20 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <style>
+     body{
+       background-color: #3455;
+       border: 12px solid #7e0a0a;
+       margin: 0px;
+       padding: 10px;
+
+     }
+      #capa{display: block;
+      margin: -2px;
+      padding: 0px;
+      }
+      #brain{
+        margin: -3px;
+        padding: 1px;
+      }
+      #texto{
+        letter-spacing: 2px;
+        border: -5px;
+      }
+    </style>
     <meta charset="UTF-8">
     <title>HTML</title>
   </head>
   <body>
-    <h1>Exercícios</h1>
+    <h1 id="texto" >Exercícios</h1>
     <ul>
  <li><a href="#Angelo"> Angelo Gabriel</a></li>
  <li><a href='#Murilo'>Murilo</a></li>
  <li><a href='#Tiago'>Tiago</a></li>
  <li><a href='#Victor'>Victor</a></li>
  </ul>
-
- <img src="https://railsmama.files.wordpress.com/2014/10/code_brain.jpg" alt="222">
- <img src="./Capa_Trybe_03.png" alt="222">
+ <img id = 'brain'; src="https://railsmama.files.wordpress.com/2014/10/code_brain.jpg" 
+ alt="A brain code"; 
+  width = '222px';>
+ <img  id='capa'; src="./Capa_Trybe_03.png" alt="Uma das capas da trybe."
+ width = '222px';>
  <p id='Angelo'> <strong>Parágrafo sobre Angelo Gabriel.</strong></p>
  <p id="Murilo"><strong>Parágrafo sobre Murilo.</strong></p>
  <p id='Tiago'><strong>Parágrafo sobre Tiago.</strong></p>
