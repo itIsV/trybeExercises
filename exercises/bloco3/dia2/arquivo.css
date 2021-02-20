@@ -1,5 +1,6 @@
-<style>
-           h1{  font-family: sans-serif; 
+
+           h1{  font-family: monospace; 
+
                 color:orange; 
                 font-size: 65px;
            }
@@ -24,4 +25,6 @@
             text-align: end;
             background-color: rgb(138, 50, 50);
         }
-        </style>
+        li{
+            font-family: 'Anton';
+        }
