@@ -1,0 +1,39 @@
+h1 {
+    text-align: center;
+  }
+
+  .first {
+    margin-left: 40%;
+    background-color: rgb(235, 200, 84);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 200px;
+  }
+
+  .second {
+    margin-left: 25%;
+    display: inline-block;
+    background-color: rgb(219, 219, 219);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 300px;
+  }
+
+  .third {
+    display: inline-block;
+    background-color: rgb(170, 142, 106);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 300px;
+  }
+
+.main{
+    text-align: center;
+}
+
+li{
+    list-style: none;
+}
