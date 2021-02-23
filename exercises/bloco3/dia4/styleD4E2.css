@@ -1,0 +1,52 @@
+body{
+    margin-left: 80px;
+}
+
+.titulo{
+    text-align: center;
+}
+
+.subtitulo{
+    margin-top: 40px; ;
+    margin-bottom: -40px;
+}
+
+.navegaçao{
+    margin-left: 230px;
+}
+
+.navegaçaoPrimaria{
+ padding: 100px;
+}
+
+.primeiroArtigo{
+   background-color: white;
+}
+
+.apresentaçao{
+    display: inline-block;
+    max-width: 45%;
+}
+
+.descriçao{
+    max-width: 45%;
+}
+
+.tabela{
+    padding: 30px;
+    display: inline-block;
+    max-width: 15%;
+}
+
+.tabelaInfo{
+    padding: 30px;
+    display: inline-block;
+    max-width: 6%;
+}
+
+.tabelaCompleta{
+    margin-left: 200px;
+    letter-spacing: -0.8px;
+    display: inline-block;
+    border: 2px solid lightgrey;
+}
