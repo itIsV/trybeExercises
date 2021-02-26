@@ -11,3 +11,10 @@ for (let n = 0; n <= valorN * valorN; n += 1) {
     }
 };
 
+//Exercício 2 :
+
+let triangulo = '';
+for (let n = 0; n <= valorN; n += 1) {
+  triangulo +='*';
+    console.log (triangulo);
+};
