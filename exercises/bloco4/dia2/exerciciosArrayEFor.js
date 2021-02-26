@@ -39,3 +39,14 @@ for (let numerosPercorridos = 0; numerosPercorridos < numbers.length; numerosPer
           }
     }
   };
+
+  //Requisito 5:
+  let maiorValorDoArray = 0;
+  for (let numerosPercorridos = 0; numerosPercorridos < numbers.length; numerosPercorridos +=1) {
+      if (numbers[numerosPercorridos] > maiorValorDoArray) {
+        maiorValorDoArray = numbers[numerosPercorridos];
+        }
+          else if (numerosPercorridos >= numbers.length - 1) {
+            console.log (maiorValorDoArray);
+          };
+  };
