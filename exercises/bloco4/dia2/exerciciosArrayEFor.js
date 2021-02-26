@@ -82,9 +82,15 @@ let menorValorDoArray = numbers[0];
   //Requisito 8:
 
   let de1A25 = [];
-  for (seraQueE25 = 1; seraQueE25 <= 25; seraQueE25 +=1) {
+  for (let seraQueE25 = 1; seraQueE25 <= 25; seraQueE25 +=1) {
     de1A25.push(seraQueE25);
      if (seraQueE25 === 25) {
         console.log (de1A25);
      };
+  };
+
+  //Requisito 9:
+
+  for (let seraQueE25 = 0; seraQueE25 < 25; seraQueE25 +=1) {
+    console.log (de1A25[seraQueE25] / 2);
   };
