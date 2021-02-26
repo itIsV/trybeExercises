@@ -41,6 +41,7 @@ for (let numerosPercorridos = 0; numerosPercorridos < numbers.length; numerosPer
   };
 
   //Requisito 5:
+
   let maiorValorDoArray = 0;
   for (let numerosPercorridos = 0; numerosPercorridos < numbers.length; numerosPercorridos +=1) {
       if (numbers[numerosPercorridos] > maiorValorDoArray) {
@@ -50,3 +51,17 @@ for (let numerosPercorridos = 0; numerosPercorridos < numbers.length; numerosPer
             console.log (maiorValorDoArray);
           };
   };
+
+  //Requisito 6:
+let numerosImpares = 0;
+for (let numerosPercorridos = 0; numerosPercorridos < numbers.length; numerosPercorridos +=1) {
+  if (numbers[numerosPercorridos] % 2 != 0 ) {
+    numerosImpares += 1;
+  };
+  if (numerosImpares === 0 && numerosPercorridos === numbers.length - 1) {
+    console.log ('Nenhum valor impar encontrado');
+  }
+    else if (numerosPercorridos === numbers.length - 1) {
+      console.log (numerosImpares);
+    };
+};
