@@ -53,6 +53,7 @@ for (let numerosPercorridos = 0; numerosPercorridos < numbers.length; numerosPer
   };
 
   //Requisito 6:
+
 let numerosImpares = 0;
 for (let numerosPercorridos = 0; numerosPercorridos < numbers.length; numerosPercorridos +=1) {
   if (numbers[numerosPercorridos] % 2 != 0 ) {
@@ -65,3 +66,15 @@ for (let numerosPercorridos = 0; numerosPercorridos < numbers.length; numerosPer
       console.log (numerosImpares);
     };
 };
+
+//Requisito 7:
+
+let menorValorDoArray = numbers[0];
+  for (let numerosPercorridos = 0; numerosPercorridos < numbers.length; numerosPercorridos +=1) {
+      if ( numbers[numerosPercorridos] < menorValorDoArray) {
+        menorValorDoArray = numbers[numerosPercorridos];
+        }
+          else if (numerosPercorridos >= numbers.length - 1) {
+            console.log (menorValorDoArray);
+          };
+  };
