@@ -78,3 +78,13 @@ let menorValorDoArray = numbers[0];
             console.log (menorValorDoArray);
           };
   };
+
+  //Requisito 8:
+
+  let de1A25 = [];
+  for (seraQueE25 = 1; seraQueE25 <= 25; seraQueE25 +=1) {
+    de1A25.push(seraQueE25);
+     if (seraQueE25 === 25) {
+        console.log (de1A25);
+     };
+  };
