@@ -1,52 +1,56 @@
-body{
-    margin-left: 80px;
+body {
+  margin-left: 80px;
 }
 
-.titulo{
-    text-align: center;
+.titulo {
+  text-align: center;
 }
 
-.subtitulo{
-    margin-top: 40px; ;
-    margin-bottom: -40px;
+a {
+  color: darkslategrey;
 }
 
-.navegaçao{
-    margin-left: 230px;
+.subtitulo {
+  margin-top: 40px; ;
+  margin-bottom: -40px;
 }
 
-.navegaçaoPrimaria{
- padding: 100px;
+.navegaçao {
+  margin-left: 230px;
 }
 
-.primeiroArtigo{
-   background-color: white;
+.navegaçaoPrimaria {
+  padding: 100px;
 }
 
-.apresentaçao{
-    display: inline-block;
-    max-width: 45%;
+.primeiroArtigo {
+  background-color: white;
 }
 
-.descriçao, .garras {
-    max-width: 90%;
+.apresentaçao {
+  display: inline-block;
+  max-width: 45%;
 }
 
-.tabela{
-    padding: 30px;
-    display: inline-block;
-    max-width: 15%;
+.descriçao, .garras, .olhos, .comportamento {
+  max-width: 90%;
 }
 
-.tabelaInfo{
-    padding: 30px;
-    display: inline-block;
-    max-width: 6%;
+.tabela {
+  padding: 30px;
+  display: inline-block;
+  max-width: 15%;
 }
 
-.tabelaCompleta{
-    margin-left: 200px;
-    letter-spacing: -0.8px;
-    display: inline-block;
-    border: 2px solid lightgrey;
+.tabelaInfo {
+  padding: 30px;
+  display: inline-block;
+  max-width: 6%;
+}
+
+.tabelaCompleta {
+  margin-left: 200px;
+  letter-spacing: -0.8px;
+  display: inline-block;
+  border: 2px solid lightgrey;
 }
