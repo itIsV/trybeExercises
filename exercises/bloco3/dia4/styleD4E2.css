@@ -54,3 +54,36 @@ a {
   display: inline-block;
   border: 2px solid lightgrey;
 }
+
+.imgStomatopodaArtigoPrimario {
+  padding-left: 140px;
+}
+
+.imgStomatopodaArtigoSecundario {
+  display: inline-block;
+  background-color: brown;
+}
+
+.divGarras {
+  display: inline-block;
+  width: 60%;
+}
+
+#imgOlhosStomatopoda {
+  height: 250px;
+  width: 1200px;
+}
+
+.olhos {
+  text-align: center;
+}
+
+.comportamento {
+ display: inline-block;
+ width: 60%;
+}
+
+#imgStomatopodaComportamento {
+  display: inline-block;
+  width: 300px;
+}
