@@ -94,3 +94,33 @@ let menorValorDoArray = numbers[0];
   for (let seraQueE25 = 0; seraQueE25 < 25; seraQueE25 +=1) {
     console.log (de1A25[seraQueE25] / 2);
   };
+
+  //Bônus 1:
+
+  for (let index = 1; index < numbers.length; index++) {
+    for (let contador = 0; contador < index; contador++) {
+      if (numbers[index] < numbers[contador]) {
+        let position = numbers[index];
+  
+        numbers[index] = numbers[contador];
+        numbers[contador] = position;
+      }
+    }
+  }
+  
+  console.log (numbers);
+
+  //Bônus 2:
+
+  for (let index = 1; index < numbers.length; index++) {
+    for (let contador = 0; contador < index; contador++) {
+      if (numbers[index] > numbers[contador]) {
+        let position = numbers[index];
+  
+        numbers[index] = numbers[contador];
+        numbers[contador] = position;
+      }
+    }
+  }
+  
+  console.log (numbers);
