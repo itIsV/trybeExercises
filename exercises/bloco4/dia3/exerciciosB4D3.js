@@ -73,3 +73,24 @@ console.log ('\nExercício 4:\n');
       break;
     }
   };  
+
+
+//Bônus exercício 5:
+
+let n = 7;
+let crazzyTriangle = '';
+let sideRight = '*';
+let sideCenter = ' ';
+let sideLeft = '*';
+let sideSpace = ' ';
+
+for (let index = 0; index < n; index += 1) {
+  if (index === 0) {
+    for (let index0 = 0; index0 < Math.ceil(n/2); index0 += 1) {
+      crazzyTriangle += sideSpace;
+    };
+    crazzyTriangle += '*';
+    console.log(crazzyTriangle);
+    crazzyTriangle = '';
+  };
+};
