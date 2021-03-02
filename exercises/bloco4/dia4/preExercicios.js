@@ -1,5 +1,5 @@
 // Pré Exercício 1:
-
+/*
 let individuo = {
   name:'Marta', lastName: 'Silva',
   age: 34,
@@ -288,4 +288,27 @@ switch (true) {
   return salarioLiquido;
 }
 
-  console.log (salario(3500));
+  console.log (salario(3500));*/
+
+
+//Parte I - Objetos e For/In:
+
+let info = {
+  personagem: "Margarida",
+  origem: "Pato Donald",
+  nota: "Namorada do personagem principal nos quadrinhos do Pato Donald",
+};
+
+console.log ('Bem-vinda, ' + info.personagem);
+
+info.recorrente = 'Sim';
+
+console.log (info);
+
+for (let v in info) {
+  console.log (v);
+};
+
+for (let v in info) {
+  console.log (info[v]);
+};
