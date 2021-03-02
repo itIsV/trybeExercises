@@ -12,7 +12,7 @@ switch (true) {
           case salarioBruto <= 5189.82 :
           inss += (11/100) * salarioBruto;
             break;
-              case salarioBruto > 1556.94 :
+              case salarioBruto > 5189.82 :
               inss += 570.88;
                 break;
 }
