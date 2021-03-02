@@ -168,4 +168,65 @@ function whatIsTheHigherNumber (numberOne, numberTwo, numberThree) {
 
   console.log (chessMove('Cavalo'));
 
+
+// Exercício 7
+  function conversorDeNota (nota) {
+if (nota >= 0 && nota <= 100) {
+  switch (true) {
+    case (nota >= 90) :
+      nota ='Sua nota é A!';
+      break;
+
+      case (nota >= 80) :
+        nota = 'Sua nota é B!';
+        break;
   
+        case (nota >= 70) :
+            nota = 'Sua nota é C!';
+            break;
+      
+            case (nota >= 60) :
+                nota = 'Sua nota é D!';
+                break;
+          
+                case (nota >= 50) :
+                    nota = 'Sua nota é E!';
+                    break;
+              
+                    case (nota < 50) :
+                        nota = 'Sua nota é F!';
+                        break;                                                  
+  }
+}
+   else {
+      nota = ' Erro!! Nota invalida.';
+    };
+      return nota;
+}
+
+console.log(conversorDeNota(100));
+
+
+// Exercício 8:
+
+function seraQueTemUmPar (numberOne, two, three) {
+  return numberOne % 2 === 0 || two % 2 === 0 || three % 2 === 0;
+};
+
+console.log (seraQueTemUmPar(0,1,2));
+
+//Exercício 9:
+
+function seraQueTemUmImpar (numberOne, two, three) {
+  return numberOne % 2 != 0 || two % 2 != 0 || three % 2 != 0;
+};
+
+console.log (seraQueTemUmImpar(0,2,22));
+
+
+
+
+
+
+
+
