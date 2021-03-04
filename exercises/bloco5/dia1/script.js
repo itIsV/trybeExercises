@@ -1,0 +1,11 @@
+document.getElementById('header-container').style.backgroundColor = '#43CD80';
+document.getElementsByClassName('emergency-tasks')[0].style.backgroundColor = '#FFA07A';
+let backgroundPurple = document.querySelectorAll('.emergency-tasks h3');
+backgroundPurple[0].style.backgroundColor ='#A020F0';
+backgroundPurple[1].style.backgroundColor ='#A020F0';
+let backgroundGold = document.querySelector('.no-emergency-tasks');
+backgroundGold.style.backgroundColor = 'gold';
+let backBlack = document.getElementsByTagName('h3');
+backBlack[2].style.backgroundColor = 'black';
+backBlack[3].style.backgroundColor = 'black';
+document.getElementById('footer-container').style.backgroundColor = '#698B69';
