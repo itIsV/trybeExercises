@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
+    <head>
+       <style>
+       .style {
+        color: midnightblue;
+        font-size: 170%;
+      }
+      </style>
+    </head>
   <body>
     <h2 id="page-title">Título</h2>
-    <p id="paragraph">Dê uma cor para este parágrafo!</p>
+    <p class="style" id="paragraph">Dê uma cor para este parágrafo!</p>
     <h4 id="subtitle">Subtítulo</h4>
-    <p id="second-paragraph">Segundo parágrafo!</p>
+    <p class="style" id="second-paragraph">Segundo parágrafo!</p>
 
     <script>
-      var paragraph = document.getElementById("paragraph");
-      paragraph.style.color = "red";
+        var paragraph = document.querySelector("#paragraph");
+paragraph.style.color = "red";
+let title = document.querySelector('#page-title');
+title.innerText += '\nIsso ai mesmo...\nSou o Título tá lgd!';
+document.querySelector('#second-paragraph').innerText += '\n É o segundo paragrafo mermo menó!';
+document.querySelector('#second-paragraph').style.width = '10px';
+document.querySelector('#subtitle').innerText = 'Hoje eu sou o Sub , mas quando esse vacilão do título cair\n as coisa vai mudá, e não vai demorar mt pra isso acontecer.';
+document.querySelectorAll('.style')[0].innerText = 'Já tinha cor\n Então dei nome!';
+document.querySelectorAll('.style')[0].style.fontFamily = "monospace";
+document.querySelectorAll('h4')[0].style.color = 'grey';
     </script>
   </body>
 </html>
