@@ -29,6 +29,22 @@
       document.getElementById('elementoOndeVoceEsta').nextSibling;
       document.getElementById('elementoOndeVoceEsta').nextElementSibling;
       document.getElementById('pai').lastChild.previousElementSibling.previousElementSibling;
-  </script>
+      let ondeBrother = document.createElement('div');
+      let pai = document.getElementById('pai');
+      let newSonOfPai = pai.appendChild(ondeBrother);
+      let onde = document.getElementById('elementoOndeVoceEsta');
+      let ondeSon = document.createElement('div');
+      onde.appendChild(ondeSon);
+      let ondeFirstSon = onde.firstElementChild;
+      let firstSonOfOndeFirstSon = document.createElement('div');
+      ondeFirstSon.appendChild(firstSonOfOndeFirstSon);
+      firstSonOfOndeFirstSon.parentElement.parentElement.nextElementSibling;
+      pai.removeChild(pai.firstElementChild);
+      pai.removeChild(pai.lastElementChild);
+      pai.removeChild(pai.lastElementChild);
+      pai.removeChild(pai.lastElementChild);
+      onde.removeChild(onde.lastElementChild);
+      onde.removeChild(onde.lastElementChild);
+      </script>
 </body>
 </html>
