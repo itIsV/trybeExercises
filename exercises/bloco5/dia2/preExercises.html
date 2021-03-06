@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div id="paiDoPai">
+    <div id="pai">
+      <div id="primeiroFilho"></div>
+      <div id="elementoOndeVoceEsta">
+        <div id="primeiroFilhoDoFilho"></div>
+        <div id="segundoEUltimoFilhoDoFilho"></div>
+      </div>
+      Atenção!
+      <div id="terceiroFilho"></div>
+      <div id="quartoEUltimoFilho"></div>
+    </div>
+  </div>
+  <script>
+      document.getElementById('elementoOndeVoceEsta');
+      document.getElementById('elementoOndeVoceEsta').parentNode.style.color = 'midnightblue';
+      document.getElementById('primeiroFilhoDoFilho').innerText = 'Adicionei um texto a ele.';
+      document.getElementById('pai').firstChild.nextElementSibling;
+      document.getElementById('elementoOndeVoceEsta').previousElementSibling;
+      document.getElementById('elementoOndeVoceEsta').nextSibling;
+      document.getElementById('elementoOndeVoceEsta').nextElementSibling;
+      document.getElementById('pai').lastChild.previousElementSibling.previousElementSibling;
+      let ondeBrother = document.createElement('div');
+      let pai = document.getElementById('pai');
+      let newSonOfPai = pai.appendChild(ondeBrother);
+      let onde = document.getElementById('elementoOndeVoceEsta');
+      let ondeSon = document.createElement('div');
+      onde.appendChild(ondeSon);
+      let ondeFirstSon = onde.firstElementChild;
+      let firstSonOfOndeFirstSon = document.createElement('div');
+      ondeFirstSon.appendChild(firstSonOfOndeFirstSon);
+      firstSonOfOndeFirstSon.parentElement.parentElement.nextElementSibling;
+      pai.removeChild(pai.firstElementChild);
+      pai.removeChild(pai.lastElementChild);
+      pai.removeChild(pai.lastElementChild);
+      pai.removeChild(pai.lastElementChild);
+      onde.removeChild(onde.lastElementChild);
+      onde.removeChild(onde.lastElementChild);
+      </script>
+</body>
+</html>
