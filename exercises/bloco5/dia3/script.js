@@ -31,3 +31,12 @@ function createACalendarDays () {
 }
 
 createACalendarDays();
+
+function holidayButton(Feriados) {
+let button = document.createElement('button');
+button.setAttribute('id', 'btn-holiday');
+button.innerHTML = 'Feriados'
+document.querySelector('.buttons-container').appendChild(button);
+}
+
+holidayButton('Feriados')
