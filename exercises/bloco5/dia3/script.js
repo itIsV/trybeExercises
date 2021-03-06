@@ -13,6 +13,8 @@ function createDaysOfTheWeek() {
   
   createDaysOfTheWeek();
   
+
+//Exercício 1: 
 function createACalendarDays () {
   const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
   const daysUl = document.querySelector('#days');
@@ -32,11 +34,27 @@ function createACalendarDays () {
 
 createACalendarDays();
 
+
+//Exercício 2:
 function holidayButton(Feriados) {
-let button = document.createElement('button');
+const button = document.createElement('button');
 button.setAttribute('id', 'btn-holiday');
 button.innerHTML = 'Feriados'
 document.querySelector('.buttons-container').appendChild(button);
 }
 
 holidayButton('Feriados')
+
+
+//Exercício 3:
+document.querySelector('#btn-holiday').addEventListener( 'click', function () {
+  let holidays = document.querySelectorAll('.holiday');
+  if  (holidays[0].getAttribute('style') === 'background-color: midnightblue;') {
+    for (let index = 0; index < holidays.length; index += 1){
+        holidays[index].style.backgroundColor = 'rgb(238,238,238)';
+        }
+  } else {
+  for (let index = 0; index < holidays.length; index += 1){
+  holidays[index].style.backgroundColor = 'midnightblue';
+  }}
+})
