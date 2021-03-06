@@ -52,9 +52,21 @@ document.querySelector('#btn-holiday').addEventListener( 'click', function () {
   if  (holidays[0].getAttribute('style') === 'background-color: midnightblue;') {
     for (let index = 0; index < holidays.length; index += 1){
         holidays[index].style.backgroundColor = 'rgb(238,238,238)';
-        }
+    }
   } else {
   for (let index = 0; index < holidays.length; index += 1){
   holidays[index].style.backgroundColor = 'midnightblue';
   }}
 })
+
+
+//Exercício 4:
+function fridayButton(butonName) {
+  let button = document.createElement('button');
+  button.innerHTML = butonName;
+  button.setAttribute('id', 'btn-friday');
+  let buttonDad = document.querySelector('.buttons-container');
+  buttonDad.appendChild(button);
+}
+
+fridayButton('Sexta-feira');
