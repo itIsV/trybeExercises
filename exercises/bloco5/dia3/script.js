@@ -99,3 +99,14 @@ document.querySelector('#days').addEventListener('mouseout', function(element) {
     let selected = element.target;
     selected.style.removeProperty('font-size');
   });
+
+
+//Exercício 7:
+function task(element) {
+  let span = document.createElement('span');
+  span.innerHTML = element;
+  document.querySelector('.my-tasks').appendChild(span);
+}
+
+task('Dormir.');
+task(' Acordar cedo.')
