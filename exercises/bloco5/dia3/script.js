@@ -70,3 +70,20 @@ function fridayButton(butonName) {
 }
 
 fridayButton('Sexta-feira');
+
+
+//Exercício 5:
+let fridayNumbers = [];
+document.querySelector('#btn-friday').addEventListener('click', function() {
+  let fridays = document.querySelectorAll('.friday');
+  if (fridays[0].innerHTML === 'Xabalabalau!!') {
+    for (let index = 0; index < fridays.length; index += 1) {
+      fridays[index].innerHTML = fridayNumbers[index];
+    }
+  } else{ 
+      for (let index = 0; index < fridays.length; index += 1) {
+        fridayNumbers.push(fridays[index].innerHTML)
+        fridays[index].innerHTML = 'Xabalabalau!!';
+      }
+    }
+})
