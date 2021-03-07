@@ -87,3 +87,15 @@ document.querySelector('#btn-friday').addEventListener('click', function() {
       }
     }
 })
+
+
+//Exercício 6
+document.querySelector('#days').addEventListener('mouseover', function(element) {
+  let selected = element.target;
+  selected.style.cssText += 'font-size: 260%';
+});
+
+document.querySelector('#days').addEventListener('mouseout', function(element) {
+    let selected = element.target;
+    selected.style.removeProperty('font-size');
+  });
