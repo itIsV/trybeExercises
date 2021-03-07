@@ -144,3 +144,25 @@ for (let index = 0; index < daysToFor.length; index += 1) {
       }
   })
 }
+
+
+//Bônus:
+let addButton = document.querySelector('#btn-add');
+addButton.addEventListener('click', function() {
+  let commitments = document.createElement('li');
+  commitments.innerHTML = document.querySelector('#task-input').value;
+  document.querySelector('.task-list').appendChild(commitments);
+})
+
+let commitmentsList = document.querySelector('#task-input');
+commitmentsList.addEventListener('keypress', function(event) {
+  if (event.keyCode === 13) {
+    if (document.querySelector('#task-input').value === '') {
+      alert('Tarefa invalida!');
+    } else {
+        let commitments = document.createElement('li');
+        commitments.innerHTML = document.querySelector('#task-input').value;
+        document.querySelector('.task-list').appendChild(commitments);
+      }
+  }
+})
