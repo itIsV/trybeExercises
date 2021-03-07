@@ -49,13 +49,13 @@ holidayButton('Feriados')
 //Exercício 3:
 document.querySelector('#btn-holiday').addEventListener( 'click', function () {
   let holidays = document.querySelectorAll('.holiday');
-  if  (holidays[0].getAttribute('style') === 'background-color: midnightblue;') {
+  if  (holidays[0].getAttribute('style') === 'background-color: lawngreen;') {
     for (let index = 0; index < holidays.length; index += 1){
         holidays[index].style.backgroundColor = 'rgb(238,238,238)';
     }
   } else {
   for (let index = 0; index < holidays.length; index += 1){
-  holidays[index].style.backgroundColor = 'midnightblue';
+  holidays[index].style.backgroundColor = 'LawnGreen';
   }}
 })
 
@@ -108,5 +108,15 @@ function task(element) {
   document.querySelector('.my-tasks').appendChild(span);
 }
 
-task('Dormir.');
-task(' Acordar cedo.')
+task('Focar na Trybe');
+
+
+//Exercício 8:
+function subtitleNeverDie(element) {
+  let taskColor = document.createElement('div');
+  taskColor.setAttribute('class', 'task');
+  taskColor.style.backgroundColor = element;
+  document.querySelector('.my-tasks').appendChild(taskColor);
+}
+
+subtitleNeverDie('cyan');
