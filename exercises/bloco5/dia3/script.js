@@ -49,7 +49,7 @@ holidayButton('Feriados')
 //Exercício 3:
 document.querySelector('#btn-holiday').addEventListener( 'click', function() {
   let holidays = document.querySelectorAll('.holiday');
-  if  (holidays[0].getAttribute('style') === 'background-color: lawngreen;') {
+  if  (holidays[0].style.backgroundColor === 'lawngreen') {
     for (let index = 0; index < holidays.length; index += 1){
         holidays[index].style.backgroundColor = 'rgb(238,238,238)';
     }
@@ -131,3 +131,16 @@ document.querySelector('.task').addEventListener('click', function() {
     taskColor.classList.remove('selected');
   }
 })
+
+
+//Exercício 10:
+let daysToFor = document.querySelectorAll('.day');
+for (let index = 0; index < daysToFor.length; index += 1) {
+  daysToFor[index].addEventListener('click', function() {
+    if (daysToFor[index].style.color === 'cyan') {
+      daysToFor[index].style.removeProperty('color');
+    } else {
+      daysToFor[index].style.cssText += 'color: ' + document.querySelector('.selected').style.backgroundColor;
+      }
+  })
+}
