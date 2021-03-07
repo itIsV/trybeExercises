@@ -47,7 +47,7 @@ holidayButton('Feriados')
 
 
 //Exercício 3:
-document.querySelector('#btn-holiday').addEventListener( 'click', function () {
+document.querySelector('#btn-holiday').addEventListener( 'click', function() {
   let holidays = document.querySelectorAll('.holiday');
   if  (holidays[0].getAttribute('style') === 'background-color: lawngreen;') {
     for (let index = 0; index < holidays.length; index += 1){
@@ -120,3 +120,14 @@ function subtitleNeverDie(element) {
 }
 
 subtitleNeverDie('cyan');
+
+
+//Exercício 9
+document.querySelector('.task').addEventListener('click', function() {
+  let taskColor = document.querySelector('.task');
+  if (taskColor.getAttribute('class') === 'task') {
+    taskColor.classList.add('selected');
+  } else {
+    taskColor.classList.remove('selected');
+  }
+})
