@@ -118,9 +118,24 @@
         let h3 = document.createElement('h3');
         div.appendChild(h3);
       }
+      
+
+
+      //Exercício 2:
+      h1.setAttribute('class', 'title');
 
 
 
+      //Passo 2:
+      let h3List = document.querySelectorAll('h3');
+      for (index = 0; index < h3List.length; index += 1) {
+        h3List[index].setAttribute('class', 'description');
+      }
+
+
+
+      //Passo 3:
+      div.removeChild(document.querySelector('.left-content'));
 
     </script>
   </body>
