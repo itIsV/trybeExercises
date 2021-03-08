@@ -137,6 +137,22 @@
       //Passo 3:
       div.removeChild(document.querySelector('.left-content'));
 
+
+      //Passo 4:
+       divRight.style.cssText = 'margin-right: auto';
+
+
+       //Passo 5:
+       document.querySelector('.center-content').style.backgroundColor = 'green';
+
+
+
+       //Passo 6:
+       let liList = document.querySelectorAll('li');
+       for (let index = 8; index < liList.length; index += 1) {
+         ul.removeChild(liList[index]);
+       }
+
     </script>
   </body>
 </html>
