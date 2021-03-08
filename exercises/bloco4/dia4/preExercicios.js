@@ -328,3 +328,15 @@ for (let index in infoTwo) {
     console.log(info[index] + ' e ' + infoTwo[index]);
     }
 }
+
+
+//Parte II - Funções:
+
+function palindrono(string) {
+  let auxiliar = '';
+  for (let index = string.length - 1; index >= 0; index -= 1) {
+    console.log(string[index]);
+  }
+}
+
+palindrono('ou todo bem?');
