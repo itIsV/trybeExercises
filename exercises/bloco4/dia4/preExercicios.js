@@ -417,3 +417,19 @@ function recursao(n) {
 }
 
 console.log(recursao(5));//Como eu amo recursividade :D. Sdd de usar.
+
+
+//Exercício 7:
+function checkTheEnd(begin, end) {
+  let compare1 = '';
+  let compare2 = '';
+  let beginIndex = begin.length -1;
+  for (let index = end.length - 1; index >= 0; index -= 1){
+    compare1 += begin[beginIndex];
+    compare2 += end[index];
+    beginIndex -=1;
+  }
+  return compare1 === compare2;
+}
+
+console.log(checkTheEnd("trybe", "be"));
