@@ -335,8 +335,74 @@ for (let index in infoTwo) {
 function palindrono(string) {
   let auxiliar = '';
   for (let index = string.length - 1; index >= 0; index -= 1) {
-    console.log(string[index]);
+    auxiliar += string[index];
   }
+  return auxiliar === string;
 }
 
-palindrono('ou todo bem?');
+console.log(palindrono('ata'));
+
+
+//Exercício 2:
+function indiceDoMaior(numeros) {
+  let indiceMaior = 0;
+  for (let indice in numeros) {
+    if (numeros[indiceMaior] < numeros[indice]) {
+      indiceMaior = indice;
+    }
+  }
+  return indiceMaior;
+}
+
+console.log(indiceDoMaior([2, 3, 6, 7, 10, 1])); //Solução do gabarito.
+
+
+//Exercício 3:
+function lowerByIndex(array) {
+  numberIndex = 0;
+  for (let index in array) {
+    if (array[0] > array[index]) {
+      array[0] = array[index];
+      numberIndex = index;
+    }
+  }
+  return numberIndex;
+}
+
+console.log(lowerByIndex([2,4,6,7,10,0,-3]));
+
+
+//Exercício 4:
+function largeString(array) {
+  numberIndex = '';
+  for (let index in array) {
+    if (array[0].length < array[index].length) {
+      array[0] = array[index];
+    }
+  }
+  return array[0];
+}
+
+console.log(largeString(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
+
+
+//Exercício 5:
+function numberMoreRepeated(array) {
+  let indexNumber = 0;
+  let compare = 0;
+  for (let index in array) {
+    let repeatedX = 0; 
+    for (let indexToo in array) {
+      if (array[index] === array[indexToo]) {
+        repeatedX += 1;
+      }
+    }
+    if (repeatedX > compare) {
+      compare = repeatedX
+      indexNumber = index
+    }
+  }
+  return array[indexNumber];
+}
+
+console.log(numberMoreRepeated([2, 3, 2, 5, 8, 2, 3]));
