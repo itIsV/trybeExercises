@@ -51,18 +51,64 @@
  Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
  Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         */
-       let p1 = 'Daqui a 2 anos vou estar nos preparativos finais para fazer um intercânbio e trabalhar no exterior.';
-       document.getElementsByTagName('p')[0].innerHTML = p1.toUpperCase();
-       let backTrybeGreen = document.getElementsByClassName('main-content');
-       backTrybeGreen[0].style.backgroundColor = 'rgb(76,164,109)';
-       document.getElementsByClassName('center-content')[0].style.backgroundColor = 'white';
-       document.getElementsByTagName('h1')[0].innerHTML = 'Exercício 5.1 - JavaScript';
-       document.getElementsByTagName('p')[2].innerText = document.getElementsByTagName('p')[2].innerText.toUpperCase();
-       let tagP = document.getElementsByTagName('p');
-       for (let index = 0; index < tagP.length; index += 1) {
-        console.log(tagP[index]); 
+       
+       
+       //Passo 1
+        function nextTwoYears(string) {
+         let paragraph = document.querySelector('p');
+         paragraph.innerText = string;
        }
        
+       nextTwoYears('Daqui a 2 anos vou estar nos preparativos finais para fazer um intercânbio e trabalhar no exterior.')
+
+
+
+       //passo 2
+       function changeColor(string) {
+         let element = document.querySelector('.main-content');
+         element.style.cssText = 'background-color: ' + string;
+       }
+
+       changeColor('rgb(76,164,109');
+
+
+       //passo 3:
+       function backgroundWhite(string) {
+         let element = document.querySelector('.center-content');
+         element.style.cssText = 'background-color: ' + string;
+       }
+
+       backgroundWhite('white');
+
+
+       //Passo 4:
+       function titleText(string) {
+         let title = document.querySelector('.title');
+         title.innerText = string;
+       }
+
+       titleText('Exercício 5.1 - JavaScript');
+
+
+       //Passo 5:
+       let pList = document.querySelectorAll('p');
+       function caps() {
+         for (let index = 0; index < pList.length; index += 1) {
+           pList[index].innerHTML = pList[index].innerHTML.toUpperCase();
+         }
+       }
+
+       caps();
+
+
+       //Passo 6:
+       function pLog() {
+         for (let index = 0; index < pList.length; index += 1)
+         console.log(pList[index].innerHTML);
+       }
+
+       pLog();
+
     </script>
   </body>
 </html>
