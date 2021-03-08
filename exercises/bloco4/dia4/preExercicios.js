@@ -406,3 +406,14 @@ function numberMoreRepeated(array) {
 }
 
 console.log(numberMoreRepeated([2, 3, 2, 5, 8, 2, 3]));
+
+
+//Exercício 6:
+function recursao(n) {
+  if (n === 0) {
+    return n
+  } else
+  {return n + recursao(n - 1);}
+}
+
+console.log(recursao(5));//Como eu amo recursividade :D. Sdd de usar.
