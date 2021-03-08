@@ -57,7 +57,102 @@
   </head>
   <body>
     <script>
-      // COLOQUE SEU CÓDIGO AQUI
+
+      //Exercício 1:
+      let h1 = document.createElement('h1');
+      h1.innerHTML = 'Exercício 5.2 - JavaScript DOM'
+      document.body.appendChild(h1);
+
+
+      //Passo 2:
+      let div = document.createElement('div');
+      div.setAttribute('class', 'main-content');
+      document.body.appendChild(div);
+
+
+      //Passo 3:
+      let divCenter = document.createElement('div');
+      divCenter.setAttribute('class', 'center-content');
+      div.appendChild(divCenter);
+
+
+      //Passo 4:
+      let centerP = document.createElement('p');
+      centerP.innerText = 'Olá !\nMeu nome é Vinícios mais podem me chamar de V.';
+      divCenter.appendChild(centerP);
+
+
+      //Passo 5:
+      let divLeft = document.createElement('div');
+      divLeft.setAttribute('class', 'left-content');
+      div.appendChild(divLeft);
+
+
+      //Passo 6:
+      let divRight = document.createElement('div');
+      divRight.setAttribute('class', 'right-content');
+      div.appendChild(divRight);
+
+
+      //Passo 7:
+      let imgDivLeft = document.createElement('img');
+      imgDivLeft.setAttribute('src', 'https://picsum.photos/200');
+      imgDivLeft.setAttribute('class', 'small-image');
+      divLeft.appendChild(imgDivLeft);
+
+
+      //Passo 8:
+      let ul = document.createElement('ul')
+      ul.setAttribute('class', 'oneToTen');
+      divRight.appendChild(ul);
+      let list = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+      for (let index = 0; index < list.length; index += 1) {
+        let li = document.createElement('li');
+        li.innerText = list[index];
+        ul.appendChild(li);
+      }
+
+
+      //Passo 9:
+      for (let index = 0; index < 3; index += 1) {
+        let h3 = document.createElement('h3');
+        div.appendChild(h3);
+      }
+      
+
+
+      //Exercício 2:
+      h1.setAttribute('class', 'title');
+
+
+
+      //Passo 2:
+      let h3List = document.querySelectorAll('h3');
+      for (index = 0; index < h3List.length; index += 1) {
+        h3List[index].setAttribute('class', 'description');
+      }
+
+
+
+      //Passo 3:
+      div.removeChild(document.querySelector('.left-content'));
+
+
+      //Passo 4:
+       divRight.style.cssText = 'margin-right: auto';
+
+
+       //Passo 5:
+       document.querySelector('.center-content').style.backgroundColor = 'green';
+
+
+
+       //Passo 6:
+       let liList = document.querySelectorAll('li');
+       for (let index = 8; index < liList.length; index += 1) {
+         ul.removeChild(liList[index]);
+       }
+
     </script>
   </body>
 </html>
