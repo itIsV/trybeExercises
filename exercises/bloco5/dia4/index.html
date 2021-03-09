@@ -9,32 +9,38 @@
 </head>
 <body>
     <header>
-        <h1 id = "title" >
-          Olá<br>Como gostaria de ler o seu texto?
-        </h1>
-        <aside>
-            <nav>
-                <ul>
-                    <li>
-                        Cor de fundo
-                    </li>
-                    <li>
-                        Cor do texto
-                    </li>
-                    <li>
-                        Tamanho da fonte
-                    </li>
-                    <li>
-                        Espaçamento entre as linhas de texto
-                    </li>
-                    <li>
-                        Tipo da fonte
-                    </li>
-                </ul>
-            </nav>
-        </aside>
+      <h1 id = "title" >
+            Olá<br>Como gostaria de ler o seu texto?
+      </h1>
+      <aside>
+          <nav>
+              <ul id="optionsList">
+                  <li>
+                      Cor de fundo: <input id="bkColor" type="text" 
+                      placeholder="Escolha uma Cor">
+                  </li>
+                  <li>
+                      Cor do texto: <input id="color" type="text" 
+                      placeholder="Escolha uma Cor">
+                  </li>
+                  <li>
+                      Tamanho da fonte: <input id="fontSize" type="text" 
+                      placeholder="Escolha Tamanho">
+                  </li>
+                  <li>
+                      Espaçamento entre as linhas de texto: <input id="spaceLine" type="text" 
+                      placeholder="Escolha o valor">
+                  </li>
+                  <li>
+                      Tipo da fonte: <input type="text" id="fontFamily"
+                      placeholder="Escolha o Tipo">
+                  </li>
+              </ul>
+          </nav>
+      </aside>
     </header>
     <main>
+        <div class="main">
         <h2 id = 'subTitle'>
             Why do we use it?
         </h2>
@@ -52,6 +58,7 @@
              sometimes by accident, sometimes on purpose (injected 
              humour and the like).
         </p>
+        </div>
     </main>
     <script src="script.js" ></script>
 </body>
