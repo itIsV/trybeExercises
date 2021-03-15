@@ -5,9 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>1º Exercise 6.1</title>
 </head>
 <body>
+  <fieldset>
+
+
+    <label for="theName"> Name:
+        <input maxlength='40'type="text" required name="name" id="theName" placeholder="write your name">
+    </label>        
+
+
+    <label for="theEmail"> e-mail:
+        <input maxlength='50'type="text" required name="e-mail" id="theEmail" placeholder="write your e-mail">
+    </label>        
+
+
+    <label for="theCPF"> CPF:
+        <input maxlength='11'type="text" required name="cpf" id="theCPF" placeholder="write your CPF">
+    </label>        
+
+
+    <label for="theAddress"> Address:
+        <input maxlength='200'type="text" required name="address" id="theAddress" placeholder="write your address">
+    </label>        
+
+
+    <label for="theCity"> City:
+        <input maxlength='28'type="text" required name='city' id="theCity" placeholder="write your City">
+    </label>        
+
+
+    <label for="theState"> State:
+      <select name="state" id="theState" required>
+        
+      </select>
+    </label>        
+
+
+    <fieldset name="residence" ><legend>Type of residence</legend>
+            <input required type="radio" name="residence" value="house" id="house">
+            <label for="house">House</label>
+            <input required type="radio" name="residence" value="apartment" id="apartment">
+            <label for="apartment">Apartment</label>
+    </fieldset>
+
+
+</fieldset>
+
     <script src="script.js"></script>
 </body>
 </html>
