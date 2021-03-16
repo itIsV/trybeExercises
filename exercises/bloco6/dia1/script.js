@@ -76,7 +76,6 @@ theButton.addEventListener('click', (evt) => { evt.preventDefault();
 
   if (radioCheck === true) {
     radioValue = 'House';
-    console.log('oi');
   } else {
     radioValue = 'apartment';
   }
@@ -93,6 +92,37 @@ theButton.addEventListener('click', (evt) => { evt.preventDefault();
   }
 
 
-  console.log(divData);
+  localStorage.divData = divData.innerHTML;
 
 });
+
+
+const clearMan = document.querySelector('#clear');
+
+clearMan.addEventListener('click', () => {
+  
+  localStorage.clear();
+
+
+  document.querySelector('#theName').value = '';
+  document.querySelector('#theEmail').value = '';
+  document.querySelector('#theCPF').value = '';
+  document.querySelector('#theAddress').value = '';
+  document.querySelector('#theCity').value = '';
+  document.querySelector('#theState').value = '';
+
+
+  const radio = document.querySelector('#radio').innerHTML;
+  const radioClear = document.querySelector('#radio');
+  radioClear.innerHTML = '';
+  radioClear.innerHTML = radio;
+  
+  
+  document.querySelector('#curriculum').value = '';
+  document.querySelector('#position').value = '';
+  document.querySelector('#roleDescription').value = '';
+  document.querySelector('#start').value = '';
+
+
+
+})
