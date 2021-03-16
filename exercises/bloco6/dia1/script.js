@@ -2,11 +2,15 @@ const states = ['Acre', 'Alagoas', 'Amapá', 'Amazonas', 'Bahia', 'Ceará', 'Dis
 const value = ['AC', 'AL', 'AP', 'AM', 'BA', "CE", 'DF', "ES", 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO'];
 
 function setOptions(states, value) {
+ 
   for (let index = 0; index < states.length; index += 1) {
     let options = document.createElement('option');
+   
     options.setAttribute('value', value[index]);
     options.innerHTML = states[index]
+   
     const pai = document.querySelector('#theState');
+   
     pai.appendChild(options);
   }
 }
@@ -15,7 +19,9 @@ setOptions(states, value);
 
 /* usei como referencia :https://www.youtube.com/watch?v=e57ReoUn6kM */
 const data = document.querySelector('#start');
+
 data.addEventListener('input', () => {
+ 
   let theVerificador = data.value.length;
   let counter = 0;
   
@@ -42,25 +48,51 @@ data.addEventListener('input', () => {
   }
 })
 
-function xab() {
-    const divData = document.createElement('div');
-    const name = document.querySelector('#theName').value;
-    const email = document.querySelector('#theEmail').value;
-    const cpf = document.querySelector('#theCPF').value;
-    const address = document.querySelector('#theAddress').value;
-    const city = document.querySelector('#theCity').value;
-    const state = document.querySelector('#theState').value;
-    //const radio = document.querySelector('#radio').innerHTML.value;
-    const curriculum = document.querySelector('#curriculum').value;
-    const position = document.querySelector('#position').value;
-    const roleDescription = document.querySelector('#roleDescription').value;
-    const start = document.querySelector('#start').value;
-    divData.classList.add('data');
-    divData.innerHTML = name, email;
-    return divData.value;
-}
 
 const theButton = document.querySelector('#submitButton');
-theButton.addEventListener('click', xab())
 
-let vai = xab();
+theButton.addEventListener('click', (evt) => { evt.preventDefault();
+
+
+  const divData = document.createElement('div');
+  const name = document.querySelector('#theName').value;
+  const email = document.querySelector('#theEmail').value;
+  const cpf = document.querySelector('#theCPF').value;
+  const address = document.querySelector('#theAddress').value;
+  const city = document.querySelector('#theCity').value;
+  const state = document.querySelector('#theState').value;
+  const radio = document.querySelector('#radio');
+  const curriculum = document.querySelector('#curriculum').value;
+  const position = document.querySelector('#position').value;
+  const roleDescription = document.querySelector('#roleDescription').value;
+  const start = document.querySelector('#start').value;
+
+
+  divData.classList.add('data');
+
+
+  let radioCheck = radio.firstElementChild.nextSibling.nextSibling.checked;
+  let radioValue = '';
+
+  if (radioCheck === true) {
+    radioValue = 'House';
+    console.log('oi');
+  } else {
+    radioValue = 'apartment';
+  }
+
+
+  divData.innerText = 'Curriculum:';
+
+  let allKeys = ['name', 'email', 'cpf', 'address', 'city', 'state', 'residence', 'curriculum', 'position', 'roleDescription', 'start']
+  let allData = [name, email, cpf, address, city, state, radioValue, curriculum, position, roleDescription, start];
+  
+  for (let index = 0; index < allData.length; index += 1) {
+    divData.innerText += ` ${allKeys[index]}: ${allData[index]};
+    `;
+  }
+
+
+  console.log(divData);
+
+});
