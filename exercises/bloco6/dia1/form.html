@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>1º Exercise 6.1</title>
+</head>
+<body>
+  <form action="" id="farm">
+  <fieldset>
+
+
+    <label for="theName"> Name:
+        <input maxlength='40'type="text" required name="name" id="theName" placeholder="write your name">
+    </label>        
+
+
+    <label for="theEmail"> e-mail:
+        <input maxlength='50'type="text" required name="e-mail" id="theEmail" placeholder="write your e-mail">
+    </label>        
+
+
+    <label for="theCPF"> CPF:
+        <input maxlength='11'type="text" required name="cpf" id="theCPF" placeholder="write your CPF">
+    </label>        
+
+
+    <label for="theAddress"> Address:
+        <input maxlength='200'type="text" required name="address" id="theAddress" placeholder="write your address">
+    </label>        
+
+
+    <label for="theCity"> City:
+        <input maxlength='28'type="text" required name='city' id="theCity" placeholder="write your City">
+    </label>        
+
+
+    <label for="theState"> State:
+      <select name="state" id="theState" required>
+        
+      </select>
+    </label>        
+
+
+    <fieldset name="residence" id="radio" ><legend>Type of residence</legend>
+            <input required type="radio" name="residence" value="house" id="house">
+            <label for="house">House</label>
+            <input required type="radio" name="residence" value="apartment" id="apartment">
+            <label for="apartment">Apartment</label>
+    </fieldset>
+
+
+  </fieldset>
+
+
+  <fieldset>
+
+
+    <label for="curriculum"> <legend>curriculum Sumary:</legend>
+        <textarea required maxlength="1000" placeholder="Type your summary" name="curriculumSumary" id="curriculum" cols="30" rows="10"></textarea>
+    </label>
+
+    <br>
+    <label for="position">Role:
+        <input required maxlength="40" placeholder="Type your role" type="text" name="role" id="position">
+    </label>
+
+
+    <label for="roleDescription">Role description:
+        <input placeholder="Max 500 characters" required maxlength="500" type="text" name="roleDescription" id="roleDescription">
+    </label>
+
+    <br>
+    <label for="start">Start date:
+        <input required maxlength="10" type="text" name="startDate" id="start" placeholder="dd/mm/eeee">
+    </label>
+
+  </fieldset>
+  <button id="submitButton" type="submit">SUBMIT</button>
+  <button id="clear" >CLEAR</button>
+  </form>
+    <script src="script.js"></script>
+</body>
+</html>
