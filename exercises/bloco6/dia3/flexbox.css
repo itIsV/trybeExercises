@@ -1,4 +1,4 @@
-.box {
+/*.box {
     color: #9069EF;
     background-color: rgb(243, 243, 243);
     border: 2px solid #232525;
@@ -12,4 +12,82 @@
 .box-container {
     background-color: #0fa36b;
     display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    flex-flow: wrap row;
+}*/
+
+/*.box {
+    color: #9069EF;
+    background-color: rgb(243, 243, 243);
+    border: 2px solid #232525;
+    font-size: 50px;
+    height: 60px;
+    margin: 10px 5px;
+    text-align: center;
+    width: 20%;
 }
+
+.box-container {
+    background-color: #0fa36b;
+    display: flex;
+    justify-content: space-between;
+} */
+
+/* .box-one {
+        color: #9069EF;
+        background-color: rgb(243, 243, 243);
+        border: 2px solid #232525;
+        font-size: 70px;
+        height: 80px;
+        margin: 10px 5px;
+        text-align: center;
+        width: 50px;
+      }
+
+      .box-two {
+        color: #9069EF;
+        background-color: rgb(243, 243, 243);
+        border: 2px solid #232525;
+        font-size: 50px;
+        height: 60px;
+        margin: 10px 5px;
+        text-align: center;
+        width: 50px;
+      }
+
+      .box-three {
+        color: #9069EF;
+        background-color: rgb(243, 243, 243);
+        border: 2px solid #232525;
+        font-size: 30px;
+        margin: 10px 5px;
+        height: 50px;
+        text-align: center;
+        width: 50px;
+      }
+
+      .box-container {
+        background-color: #0fa36b;
+        display: flex;
+        align-items: baseline;
+      } */
+
+      .box {
+        color: #9069EF;
+        background-color: rgb(243, 243, 243);
+        border: 2px solid #232525;
+        font-size: 50px;
+        height: 60px;
+        margin: 10px 5px;
+        text-align: center;
+        width: 30%;
+      }
+
+      .box-container {
+        align-content: space-between;
+        background-color: #0fa36b;
+        display: flex;
+        flex-wrap: wrap;
+        height: 600px;
+      }
