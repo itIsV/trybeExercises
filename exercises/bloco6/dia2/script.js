@@ -24,7 +24,7 @@ setOptions(states, value);
 /* usei como referencia :https://www.youtube.com/watch?v=e57ReoUn6kM */
 const data = document.querySelector('#start');
 
-data.addEventListener('input', () => {
+/* data.addEventListener('input', () => {
  
   let theVerificador = data.value.length;
   let counter = 0;
@@ -50,7 +50,7 @@ data.addEventListener('input', () => {
     data.value = '';  
     alert('data inválida');
   }
-})
+}) */
 
 
 const theButton = document.querySelector('#submitButton');
@@ -131,4 +131,12 @@ clearMan.addEventListener('click', () => {
 
 })
 
-document.getElementById('#start').DatePickerX.init();
+var picker = new Pikaday(
+  {
+    field: document.querySelector('.datepicker'),
+    firstDay: 1,
+    minDate: new Date(),
+    maxDate: new Date(2021,12,31),
+    yearRange: [2000,2021]
+  }
+);
