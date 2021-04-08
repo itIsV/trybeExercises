@@ -1,0 +1,28 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: rgb(226, 230, 228);
+  font-size: x-large;
+
+}
+
+.figure-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.figure-container figure {
+  width: 49%;
+  margin: 15px 0px;
+}
+
+.figure-container figure img {
+  max-width: 100%;
+  margin: 5px 0px;
+}
+
