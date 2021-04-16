@@ -1,0 +1,13 @@
+.container {
+  text-align: center;
+}
+
+.bigTitle {
+  font-style: italic;
+}
+
+#buddie {
+  padding: 6px 20px;
+  border-radius: 10px;
+  font-size: large;
+}
