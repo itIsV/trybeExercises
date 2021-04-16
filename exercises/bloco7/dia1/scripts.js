@@ -17,6 +17,23 @@
 
 // console.log(oddsAndEvens);
 
-const amor = (n) => n === 1 ? n : n * amor(n -1);
+// const amor = (n) => n === 1 ? n : n * amor(n -1);
 
-console.log(amor(4));
+// console.log(amor(4));
+
+const longestWord = (phrase) => {
+  array = phrase.split(' ');
+  let result = '';
+  let aux = '';
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[0].length < array[index].length) {
+      aux = array[0];
+      array[0] = array[index];
+      array[index] = aux;
+    } 
+    result = array[0];
+  }
+  return result;
+}
+
+console.log(longestWord("Antônio foi no banheiro e não sabemos o que aconteceu"));
