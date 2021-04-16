@@ -21,19 +21,40 @@
 
 // console.log(amor(4));
 
-const longestWord = (phrase) => {
-  array = phrase.split(' ');
-  let result = '';
-  let aux = '';
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[0].length < array[index].length) {
-      aux = array[0];
-      array[0] = array[index];
-      array[index] = aux;
-    } 
-    result = array[0];
-  }
-  return result;
+// const longestWord = (phrase) => {
+//   array = phrase.split(' ');
+//   let result = '';
+//   let aux = '';
+//   for (let index = 0; index < array.length; index += 1) {
+//     if (array[0].length < array[index].length) {
+//       aux = array[0];
+//       array[0] = array[index];
+//       array[index] = aux;
+//     } 
+//     result = array[0];
+//   }
+//   return result;
+// }
+
+// console.log(longestWord("Antônio foi no banheiro e não sabemos o que aconteceu"));
+let frase = 'Tryber x aqui!';
+newFrase = '';
+
+const implementaPalavra = (palavra) => {frase
+.split('')
+.filter((x,index) =>newFrase += x === 'x' ? frase[index] = palavra : x)
+return newFrase;
 }
 
-console.log(longestWord("Antônio foi no banheiro e não sabemos o que aconteceu"));
+let principaisSkills = ['Logica', 'Determinaçao', 'Resiliencia', 'planejamento', 'javaScript'];
+
+const isPresentation = (array) => {
+  let retorno = ''
+  array.forEach(element => retorno += `
+  ${element};\n`)
+  return retorno;
+}
+
+console.log(`${implementaPalavra('V')} Minhas cinco principais habilidades são: 
+${isPresentation(principaisSkills)}
+...#goTrybe`);
