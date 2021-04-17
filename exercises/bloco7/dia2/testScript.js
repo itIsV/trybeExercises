@@ -4,7 +4,8 @@
 //   return object;
 // }
 // test(tana, 'que', 'foi?')
-// console.log(tana);
+// test(tana, 'será?', 'será!')
+// console.table(tana);
 
 // const student = {
 //   HTML: 'Exelente!',
@@ -119,5 +120,5 @@ const lesson3 = {
 
 // console.log(objectValues(lesson1));
 
-const allLessons = Object.assign({}, lesson1 );
-console.log(allLessons);
+// const allLessons = Object.assign({}, lesson1 );
+// console.log(allLessons);
