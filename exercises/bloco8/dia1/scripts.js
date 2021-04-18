@@ -1,4 +1,5 @@
-const employedPerson = (nomeCompleto) => ({nomeCompleto, email:`${nomeCompleto.split(' ')[0]}_${nomeCompleto.split(' ')[1]}@trybe.com`});
+const employedPerson = (nomeCompleto) => ({nomeCompleto, email:`${nomeCompleto.split(' ')[0]}_${nomeCompleto
+  .split(' ')[1]}@trybe.com`});
 
 const newEmployees = () => {
   const employees = {
