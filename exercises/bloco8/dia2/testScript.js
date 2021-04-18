@@ -19,15 +19,15 @@
 
 // console.log(firstMultipleOfFive([11, 24, 39, 47, 50, 62, 75, 81, 96, 100]));
 
-const emailListInData = [
-  'roberta@email.com',
-  'paulo@email.com',
-  'anaroberta@email.com',
-  'fabiano@email.com',
-];
+// const emailListInData = [
+//   'roberta@email.com',
+//   'paulo@email.com',
+//   'anaroberta@email.com',
+//   'fabiano@email.com',
+// ];
 
-const showEmailList = (email, index) => {
-  console.log(`${index + 1}º: O email ${email} esta cadastrado em nosso banco de dados!`);
-};
+// const showEmailList = (email, index) => {
+//   console.log(`${index + 1}º: O email ${email} esta cadastrado em nosso banco de dados!`);
+// };
 
-emailListInData.forEach(showEmailList);
+// emailListInData.forEach(showEmailList);
