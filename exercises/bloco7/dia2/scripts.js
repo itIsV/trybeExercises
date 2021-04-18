@@ -91,7 +91,53 @@ const lesson3 = {
 
 // valuesList(lesson1);
 
-// const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
+const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
 // console.log(allLessons);
 
-const totalOfStudents = ()
+// const totalOfStudents = (obect) => {
+//   let result = 0;
+//   for (index in obect) {
+//     result += obect[index].numeroEstudantes;
+//   }
+//   console.log(result);
+// }
+
+// totalOfStudents(allLessons)
+
+// const getValueByNumber = (object, number) => Object.values(object)[number];
+
+// console.log(getValueByNumber(lesson1, 0));
+
+// const verifyPair = (obect, key, value) => obect[key] === value;
+
+// console.log(verifyPair(lesson3, 'turno', 'noite'));
+
+// console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
+
+// const watchMathClass = (obect) => {
+//   let result = 0;
+//   for (index in obect) {
+//     obect[index].materia === 'Matemática' ? result += obect[index].numeroEstudantes : obect;
+//     }
+//   return result;
+// }
+
+// console.log(watchMathClass(allLessons));
+
+const createReport = (object, person) => {
+  let aula = [];
+  let students = 0;
+  for (index in object) {
+    object[index].professor === person ? aula.push(object[index].materia) : object; 
+    }
+  for (index in object) {
+    object[index].professor === person ? students += object[index].numeroEstudantes : object; 
+    }
+  return {
+    professor: person,
+    aulas: aula,
+    estudantes: students,
+  }
+}
+
+console.log(createReport(allLessons, 'Maria Clara'));
