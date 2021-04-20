@@ -31,3 +31,11 @@ const { a: name, b: classAssigned, c: subject } = student;
 console.log(name); // Maria
 console.log(classAssigned); // Turma B
 console.log(subject); // Matemática
+
+const arrayCountries = ['Brazil', 'Japan', 'China', 'Canada'];
+const [firstCountry, secondCountry, thirdCountry, fourthCountry] = arrayCountries;
+
+console.log(firstCountry); // Brazil
+console.log(secondCountry); // Japan
+console.log(thirdCountry); // China
+console.log(fourthCountry); // Canada
