@@ -40,8 +40,15 @@ const product = {
 // console.log(thirdCountry); // China
 // console.log(fourthCountry); // Canada
 
-let a = 8, b = 6;
-console.log(`agora a vale: ${a} e b vale: ${b}`);
-                  [a, b] = [b, a];
-console.log('---------------------------');
-console.log(`agora a vale: ${a} e b vale: ${b}`);
+// let a = 8, b = 6;
+// console.log(`agora a vale: ${a} e b vale: ${b}`);
+//                   [a, b] = [b, a];
+// console.log('---------------------------');
+// console.log(`agora a vale: ${a} e b vale: ${b}`);
+
+const source = [1,2,3,4,5,6,7,8,9,10];
+const removeFirstTwo = (list) => { const [,, ...arr] = list; // O numero de vírgulas determina os elementos a serem pulados.
+  return arr;
+}
+const arr = removeFirstTwo(source);
+console.log(arr);
