@@ -90,3 +90,11 @@
 const multiply = (number, value = 1) => number * value;
 
 console.log(multiply(8));
+const source = [1,2,3,4,5,6,7,8,9,10];
+const removeFirstTwo = (list) => { const [,, ...arr] = list; // O numero de vírgulas determina os elementos a serem pulados.
+  return arr;
+}
+const arr = removeFirstTwo(source);
+console.log(arr);
+
+
