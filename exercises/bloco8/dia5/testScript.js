@@ -8,11 +8,11 @@
 
 // console.log(fruitSalad(specialFruit, additionalItens));
 
-const product = {
-  name: 'Smart TV Crystal UHD',
-  price: '1899.05',
-  seller: 'Casas de Minas',
-};
+// const product = {
+//   name: 'Smart TV Crystal UHD',
+//   price: '1899.05',
+//   seller: 'Casas de Minas',
+// };
 
 // const printObjectValues = (object) => `${Object.values(object)}`;
 // console.log(printObjectValues(product));
@@ -46,9 +46,47 @@ const product = {
 // console.log('---------------------------');
 // console.log(`agora a vale: ${a} e b vale: ${b}`);
 
-const source = [1,2,3,4,5,6,7,8,9,10];
-const removeFirstTwo = (list) => { const [,, ...arr] = list; // O numero de vírgulas determina os elementos a serem pulados.
-  return arr;
-}
-const arr = removeFirstTwo(source);
-console.log(arr);
+// const source = [1,2,3,4,5,6,7,8,9,10];
+// const removeFirstTwo = (list) => { const [,, ...arr] = list; // O numero de vírgulas determina os elementos a serem pulados.
+//   return arr;
+// }
+// const arr = removeFirstTwo(source);
+// console.log(arr);
+
+// const person = {
+//   name: 'João',
+//   lastName: 'Jr',
+//   age: 34,
+// };
+
+// const { nationality = 'Brazilian' } = person;
+// console.log(nationality); // Brazilian // Não consigo ver o menor sentio nisso...
+
+// const position2d = [1.0, 2.0];
+// const [x, y, z = 0] = position2d;
+
+// console.log(x); // 1
+// console.log(y); // 2
+// console.log(z); // 0
+
+// const getNationality = ({ firstName, nationality }) => `${firstName} is ${nationality}`;
+
+// const person = {
+//     firstName: 'João',
+//     lastName: 'Jr II',
+// };
+
+// const otherPerson = {
+//     firstName: 'Ivan',
+//     lastName: 'Ivanovich',
+//     nationality: 'Russian',
+// };
+
+// person.nationality = 'Brazilian';
+
+// console.log(getNationality(otherPerson)); // Ivan is Russian
+// console.log(getNationality(person));
+
+const multiply = (number, value = 1) => number * value;
+
+console.log(multiply(8));
