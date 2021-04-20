@@ -1,16 +1,9 @@
 // hello code
 
-const pessoas = [
-  {
-    peso:60,
-    altura:2.0,
-    codeName:'Palito',
-    }
-]
+const specialFruit = ['Banana', 'Manga', 'maça'];
 
-const imc = ({peso}, {altura}, {nome}) => {
-  const imc = (peso / (altura * altura)).toFixed(2);
-  return console.log(`O IMC de ${nome} é: ${imc}`);
-}
+const additionalItens = ['Mel', 'Cereja picada'];
 
-console.log(Object.entries(...pessoas));
+const fruitSalad = (specialFruit, additionalItens) => [...specialFruit, ...additionalItens];
+
+console.log(fruitSalad(specialFruit, additionalItens));
