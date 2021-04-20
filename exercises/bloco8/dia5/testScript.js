@@ -52,3 +52,26 @@ const removeFirstTwo = (list) => { const [,, ...arr] = list; // O numero de vír
 }
 const arr = removeFirstTwo(source);
 console.log(arr);
+
+const pessoas = [
+  {
+    peso:60,
+    altura:2.0,
+    codeName:'Palito',
+    },
+  {
+    peso:60,
+    altura:2.0,
+    codeName:'Palito',
+    }
+]
+
+const imc = (element) => {
+  element.forEach(({peso}, {altura}, {nome}) => 
+  const imc = (peso / (altura * altura)).toFixed(2);
+  )
+  return console.log(`O IMC de ${nome} é: ${imc}`);
+}
+
+imc(...pessoas);
+
