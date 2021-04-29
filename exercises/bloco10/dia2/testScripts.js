@@ -5,5 +5,4 @@ const SumNumbers = (a, b, callback) => {
   }, 500)
 }
 
-
 module.exports = (SumNumbers);
