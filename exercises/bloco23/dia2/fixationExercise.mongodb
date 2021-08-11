@@ -1,3 +1,5 @@
+// Tests and examples with sort()
+
 db.example.drop()
 
 use colecao
@@ -88,3 +90,36 @@ db.restaurants.find().count()
 db.restaurants.find({},{name: 1, _id:0}).sort({name: 1}).pretty()
 
 db.restaurants.find({},{rating: 1, name: 1, _id:0}).sort({rating: -1}).pretty()
+
+//Tests and examples with deleteOne() and deleteMany()
+
+db.restaurants.find({},{rating: 1, name: 1, _id:0}).sort({rating: 1}).pretty()
+
+db.restaurants.deleteOne({rating: 2})
+
+db.restaurants.deleteMany({rating: {$lt: 5}})
+
+db
+  .restaurants
+  .find({},{_id: 0})
+  .limit(2)
+
+db.restaurants
+  .find({cuisine: 'Ice Cream, Gelato, Yogurt, Ices'},{name: 1, cuisine: 1, rating: 1, _id:0})
+  .sort({cuisine: 1}).pretty()
+
+db
+  .restaurants
+  .deleteOne({
+    cuisine: 'Ice Cream, Gelato, Yogurt, Ices'
+  })
+
+db
+  .restaurants
+  .find({cuisine: 'American'},{name: 1, cuisine: 1, rating: 1, _id:0})
+
+db
+  .restaurants
+  .deleteMany({
+    cuisine: 'American'
+  })
