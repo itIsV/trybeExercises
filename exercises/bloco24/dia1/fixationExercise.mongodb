@@ -1,0 +1,90 @@
+use conteudo_trybe;
+db.inventory.insertMany([
+{ "item": "journal", "qty": 25, "size": { "h": 14, "w": 21, "uom": "cm" }, "status": "A" },
+{ "item": "notebook", "qty": 50, "size": { "h": 8.5, "w": 11, "uom": "in" }, "status": "A" },
+{ "item": "paper", "qty": 100, "size": { "h": 8.5, "w": 11, "uom": "in" }, "status": "D" },
+{ "item": "planner", "qty": 75, "size": { "h": 22.85, "w": 30, "uom": "cm" }, "status": "D" },
+{ "item": "postcard", "qty": 45, "size": { "h": 10, "w": 15.25, "uom": "cm" }, "status": "A" }
+]);
+
+db.inventory.findOne({
+  item: "paper"
+});
+
+db.inventory.updateOne(
+  { item: "paper" },
+  { $set: { "size.uom": "cm", status: "P" } }
+);
+
+db.fruits.insertOne(
+  { _id: 100, name: "Banana", quantity: 100, inStock: true }
+);
+
+db.fruits.updateOne(
+  { name: "Banana" },
+  { $rename: {
+      "name": "productName"
+    }
+  }
+);
+
+db.fruits.find().pretty();
+
+db.fruits.updateMany({
+  productName: "Banana"
+}, {
+    $unset: {
+      quantity: 1
+    } 
+});
+
+db.fruits.updateMany({
+  productName: "Banana"
+}, {
+    $unset: {
+      inStock: 0
+    } 
+});
+
+
+db.fruits.updateMany({
+  productName: "Banana"
+}, {
+    $unset: {
+      productName: false
+    } 
+});
+
+db.fruits.insertMany([
+  { um: 1 },
+  { dois: 2 },
+  { tres: 3 },
+]);
+
+db.fruits.find().pretty();
+
+db.fruits.insertOne({
+  o: {
+    bagui: "É testar"
+  },
+  tresta: 3 
+});
+
+db.fruits.updateMany({
+  tresta: 3
+}, {
+    $unset: {
+      o: true,
+      tresta: true,
+    }
+});
+
+db.fruits.updateMany({
+  tresta: 3
+}, {
+    $unset: {
+      "o.bagui": true,
+      tresta: true,
+    }
+});
+
