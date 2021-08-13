@@ -29,3 +29,62 @@ db.fruits.updateOne(
 );
 
 db.fruits.find().pretty();
+
+db.fruits.updateMany({
+  productName: "Banana"
+}, {
+    $unset: {
+      quantity: 1
+    } 
+});
+
+db.fruits.updateMany({
+  productName: "Banana"
+}, {
+    $unset: {
+      inStock: 0
+    } 
+});
+
+
+db.fruits.updateMany({
+  productName: "Banana"
+}, {
+    $unset: {
+      productName: false
+    } 
+});
+
+db.fruits.insertMany([
+  { um: 1 },
+  { dois: 2 },
+  { tres: 3 },
+]);
+
+db.fruits.find().pretty();
+
+db.fruits.insertOne({
+  o: {
+    bagui: "É testar"
+  },
+  tresta: 3 
+});
+
+db.fruits.updateMany({
+  tresta: 3
+}, {
+    $unset: {
+      o: true,
+      tresta: true,
+    }
+});
+
+db.fruits.updateMany({
+  tresta: 3
+}, {
+    $unset: {
+      "o.bagui": true,
+      tresta: true,
+    }
+});
+
