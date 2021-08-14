@@ -219,3 +219,27 @@ db.supplies.updateOne({
 });
 
 db.supplies.find().pretty();
+
+db.inventory.find({
+  _id: 1
+}).pretty();
+
+db.inventory.insertOne({
+  _id: 1,
+  item: "polarizing_filter",
+  tags: ["electronics", "camera"],
+});
+
+db.inventory.find().pretty();
+
+db.inventory.updateOne(
+  { _id: 1 },
+  { $addToSet: { tags: "accessories" } },
+);
+
+db.inventory.updateOne(
+  { _id: 1 },
+  { $addToSet: { tags: "camera"  } }, // modifiedCount: 0, because value has already exist
+);
+
+ // addToSet can be used with $each
