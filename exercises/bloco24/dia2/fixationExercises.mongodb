@@ -61,10 +61,21 @@ db.supplies.updateOne(
             "name": "pens",
             "price": 56.12,
             "quantity": 5,
+          }, 
+          {
+            "name": "pencil",
+            "price": 60.12,
+            "quantity": 12,
           },
+          {
+            "name": "table",
+            "price": 600.12,
+            "quantity": 16,
+          },
+
         ],
         $sort: { quantity: -1 },
-        $slice: 2,
+        $slice: 2
       },
     },
   },
@@ -74,3 +85,137 @@ db.supplies.updateOne(
 db.supplies.find().pretty();
 
 db.supplies.updateOne({ _id: 1 }, { $pop: { items: -1 } }); // with 1 remove last item
+
+db.supplies.updateOne(
+  { _id: 1 },
+  {
+    $push: {
+      items: {
+        $each: [
+          {
+            "name" : "notepad",
+            "price" : 35.29,
+            "quantity" : 2,
+          },
+          {
+            "name": "envelopes",
+            "price": 19.95,
+            "quantity": 8,
+          },
+          {
+            "name": "pens",
+            "price": 56.12,
+            "quantity": 5,
+          },
+        ],
+      },
+    },
+  },
+  { upsert: true },
+);
+
+
+db.supplies.updateOne(
+  { _id: 2 },
+  {
+    $push: {
+      items: {
+        $each: [
+          {
+            "name" : "pencil",
+            "price" : 5.29,
+            "quantity" : 2,
+          },
+          {
+            "name": "envelopes",
+            "price": 19.95,
+            "quantity": 8,
+          },
+          {
+            "name": "backpack",
+            "price": 80.12,
+            "quantity": 1,
+          },
+          {
+            "name": "pens",
+            "price": 56.12,
+            "quantity": 5,
+          },
+        ],
+      },
+    },
+  },
+  { upsert: true },
+);
+
+db.supplies.updateOne({ _id: 1 }, { $pop: { items: -1 } });
+
+db.supplies.find().pretty();
+
+db.supplies.updateMany(
+  {},
+  {
+    $pull: {
+      items: {
+        name: { $in: ["pens", "envelopes"] },
+      },
+    },
+  },
+);
+
+db.supplies.find().pretty();
+
+db.supplies.updateMany({
+  _id: {
+    $in: [1, 2] 
+  }
+},
+  {
+    $push: { votes: [3, 5, 6, 7, 7, 8] }
+  },
+  { upsert: true },
+);
+
+db.supplies.updateOne(
+  { _id: 1 },
+  {
+    $pull: {
+      votes: { $gt: 2 },
+    },
+  },
+);
+
+
+db.supplies.find().pretty();
+
+db.supplies.updateOne({
+  _id: 1
+}, {
+  $push: {
+    votes: [1, 2]
+  }
+}, {
+  $upsert: true
+});
+
+db.supplies.updateOne({
+  _id: 1
+}, {
+  $unset: {
+    "votes": 1
+  }
+});
+
+db.supplies.updateOne({
+  _id: 1
+}, {
+  $push: {
+    votes: {
+      $each: [1, 2]
+      }
+  }
+}, {
+  $upsert: true
+});
+
+db.supplies.find().pretty();
