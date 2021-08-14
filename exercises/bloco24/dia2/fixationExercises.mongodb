@@ -72,3 +72,5 @@ db.supplies.updateOne(
 );
 
 db.supplies.find().pretty();
+
+db.supplies.updateOne({ _id: 1 }, { $pop: { items: -1 } }); // with 1 remove last item
