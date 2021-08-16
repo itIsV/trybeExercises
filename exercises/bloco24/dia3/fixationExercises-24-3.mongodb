@@ -155,3 +155,82 @@ db.movies.find({
     title: 1, ratings: 1, _id: 0
   }
 );
+
+
+db.movies.find({
+  category: /adventure/i,
+  ratings: {
+    $elemMatch: {
+      $gte: 103,
+    }
+  }
+},
+  {
+    category: 1, title: 1, ratings: 1, _id: 0
+  }
+);
+
+
+
+db.movies.find({
+  category: {
+    $size: 2,
+  }
+},
+  {
+    title: 1, _id: 0
+  }
+);
+
+
+db.movies.find().pretty();
+
+
+db.movies.find({
+  ratings: {
+    $size: 4,
+  }
+},
+  {
+    title: 1, _id: 0
+  }
+);
+
+
+db.movies.find({
+  budget: { 
+    $mod: [5, 0]
+    },
+  category: {
+    $size: 2,
+  },
+});
+
+
+
+db.movies.find({
+  $or: [
+  {category: "sci-fi"},
+  {ratings: { $gt: 199 }}
+  ]
+},
+  {
+    title: 1,
+    ratings: 1,
+    _id: 0,
+  }
+);
+
+
+
+
+db.movies.find({
+  $and: [
+    {ratings: { $size: 4 }},
+    {$or: [
+      {category: "adventure" },
+      {category: "family" }
+    ]},
+    {imdbRating: { $gte: 7 }}
+  ],
+});
